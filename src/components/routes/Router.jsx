@@ -3,6 +3,8 @@ import Root from '../root/Root';
 import Home from '../home/Home';
 import Login from '../login/Login';
 import Register from '../register/Register';
+import AddProduct from '../addProduct/AddProduct';
+import MyCart from '../myCart/MyCart';
 
 const Router = createBrowserRouter([
   {
@@ -12,6 +14,14 @@ const Router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
+      },
+      {
+        path: '/addProduct',
+        element: <AddProduct></AddProduct>,
+      },
+      {
+        path: '/myCart',
+        element: <MyCart></MyCart>,
       },
       {
         path: '/login',
