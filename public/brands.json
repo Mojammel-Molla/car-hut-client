@@ -2,31 +2,37 @@
   {
     "id": 1,
     "name": "Toyota",
-    "image": "https://i.ibb.co/7vgHD19/toyota.png"
+    "image": "https://i.ibb.co/7vgHD19/toyota.png",
+    "brand_slogan": "Let's Go Places"
   },
   {
     "id": 2,
     "name": "Honda",
-    "image": "https://i.ibb.co/jTTqLwj/honda.jpg"
+    "image": "https://i.ibb.co/jTTqLwj/honda.jpg",
+    "brand_slogan": "The Power of Dreams"
   },
   {
     "id": 3,
     "name": "Volkswagen",
-    "image": "https://i.ibb.co/H7fJ3gD/volkswagen.jpg"
+    "image": "https://i.ibb.co/H7fJ3gD/volkswagen.jpg",
+    "brand_slogan": "Das Auto"
   },
   {
     "id": 4,
     "name": "Mercedes-Benz",
-    "image": "https://i.ibb.co/m82wRqJ/marcedes.png"
+    "image": "https://i.ibb.co/m82wRqJ/marcedes.png",
+    "brand_slogan": "The best or nothing"
   },
   {
     "id": 5,
     "name": "BMW",
-    "image": "https://i.ibb.co/8NRxsh8/bmw.jpg"
+    "image": "https://i.ibb.co/8NRxsh8/bmw.jpg",
+    "brand_slogan": "The Ultimate Driving Machine"
   },
   {
     "id": 6,
     "name": "Ford",
-    "image": "https://i.ibb.co/0FqY0Sm/ford.jpg"
+    "image": "https://i.ibb.co/0FqY0Sm/ford.jpg",
+    "brand_slogan": "Built Ford Tough"
   }
 ]
