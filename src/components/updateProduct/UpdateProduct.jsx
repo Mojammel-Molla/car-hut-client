@@ -1,7 +1,5 @@
-import React from 'react';
-
-const AddProduct = () => {
-  const handleAddProduct = e => {
+const UpdateProduct = () => {
+  const handleUpdateProduct = e => {
     e.preventDefault();
     const form = e.target;
     const brand = form.brand.value;
@@ -25,12 +23,12 @@ const AddProduct = () => {
   };
   return (
     <div>
-      <h1 className="text-center text-4xl font-bold my-5">Add Products</h1>
-      <form onSubmit={handleAddProduct} className="card-body mx-auto w-2/4">
+      <h1 className="text-center text-4xl font-bold my-5">Update Products</h1>
+      <form onSubmit={handleUpdateProduct} className="card-body mx-auto w-2/4">
         <div className="flex gap-5 ">
           <div className="form-control w-2/4">
             <label className="label">
-              <span className="label-text">Brand:</span>
+              <span className="label-text">Update Brand:</span>
             </label>
             <input
               name="brand"
@@ -42,7 +40,7 @@ const AddProduct = () => {
           </div>
           <div className="form-control w-2/4">
             <label className="label">
-              <span className="label-text">Model:</span>
+              <span className="label-text">Update Model:</span>
             </label>
             <input
               name="model"
@@ -56,7 +54,7 @@ const AddProduct = () => {
         <div className="flex gap-5">
           <div className="form-control w-2/4">
             <label className="label">
-              <span className="label-text">Photo:</span>
+              <span className="label-text">Update Photo:</span>
             </label>
             <input
               name="photo"
@@ -68,7 +66,7 @@ const AddProduct = () => {
           </div>
           <div className="form-control w-2/4">
             <label className="label">
-              <span className="label-text">Price:</span>
+              <span className="label-text">Update Price:</span>
             </label>
             <input
               name="price"
@@ -82,7 +80,7 @@ const AddProduct = () => {
         <div className="flex gap-5">
           <div className="form-control w-2/4">
             <label className="label">
-              <span className="label-text">Category:</span>
+              <span className="label-text">Update Category:</span>
             </label>
             <input
               name="category"
@@ -94,7 +92,7 @@ const AddProduct = () => {
           </div>
           <div className="form-control w-2/4">
             <label className="label">
-              <span className="label-text">Rating:</span>
+              <span className="label-text">Update Rating:</span>
             </label>
             <input
               name="rating"
@@ -107,7 +105,7 @@ const AddProduct = () => {
         </div>
         <div className="form-control w-4/4">
           <label className="label">
-            <span className="label-text">Description:</span>
+            <span className="label-text">Update Description:</span>
           </label>
           <input
             name="description"
@@ -119,11 +117,11 @@ const AddProduct = () => {
         </div>
 
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Add Product</button>
+          <button className="btn btn-primary ">Update Product</button>
         </div>
       </form>
     </div>
   );
 };
 
-export default AddProduct;
+export default UpdateProduct;
