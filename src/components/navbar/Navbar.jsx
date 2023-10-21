@@ -13,7 +13,7 @@ const Navbar = () => {
         </NavLink>
       </li>
       <li>
-        <NavLink to="/myCart" className="mr-5">
+        <NavLink to="/cart" className="mr-5">
           My Cart
         </NavLink>
       </li>
@@ -22,9 +22,9 @@ const Navbar = () => {
           Add Product
         </NavLink>
       </li>
-      <li>
+      {/* <li>
         <NavLink to="/updateProduct">Update Product</NavLink>
-      </li>
+      </li> */}
       <li>
         <NavLink to="/login">Log in</NavLink>
       </li>

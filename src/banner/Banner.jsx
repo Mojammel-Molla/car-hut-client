@@ -1,14 +1,14 @@
-import bannerImage from '../assets/35869337_1635.jpg';
+import bannerImage from '../assets/34861221_8218093.jpg';
 const Banner = () => {
   return (
     <>
       <div
-        className="hero min-h-screen mx-auto mt-5"
+        className="hero w-full  min-h-screen bg-cover mx-auto mt-5"
         style={{
           backgroundImage: `url(${bannerImage})`,
         }}
       >
-        <div className="hero-overlay bg-opacity-40"></div>
+        <div className=" "></div>
         <div className="hero-content text-center text-neutral-content">
           {/* <div className="max-w-md">
           <h1 className="mb-5 text-5xl font-bold">Hello there</h1>

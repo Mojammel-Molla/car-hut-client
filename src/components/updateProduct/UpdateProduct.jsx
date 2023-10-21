@@ -1,4 +1,11 @@
+import { useLoaderData } from 'react-router-dom';
+import Swal from 'sweetalert2';
 const UpdateProduct = () => {
+  const updatedData = useLoaderData();
+  const { brand, model, photo, price, category, rating, description } =
+    updatedData || {};
+  console.log(updatedData);
+
   const handleUpdateProduct = e => {
     e.preventDefault();
     const form = e.target;
@@ -20,7 +27,31 @@ const UpdateProduct = () => {
       description,
     };
     console.log(newProduct);
+
+    fetch(
+      'https://car-hut-server-nkl9gnsf2-mojammel-mollas-projects.vercel.app/products',
+      {
+        method: 'PUT',
+        headers: {
+          'content-type': 'application/json',
+        },
+        body: JSON.stringify(newProduct),
+      }
+    )
+      .then(res => res.json())
+      .then(data => {
+        console.log(data);
+        if (data.modifiedCount > 0) {
+          Swal.fire({
+            position: 'top-center',
+            icon: 'success',
+            title: 'Your product has been updated',
+            showConfirmButton: false,
+          });
+        }
+      });
   };
+
   return (
     <div>
       <h1 className="text-center text-4xl font-bold my-5">Update Products</h1>
@@ -31,6 +62,7 @@ const UpdateProduct = () => {
               <span className="label-text">Update Brand:</span>
             </label>
             <input
+              defaultValue={brand}
               name="brand"
               type="text"
               placeholder="Brand name"
@@ -43,6 +75,7 @@ const UpdateProduct = () => {
               <span className="label-text">Update Model:</span>
             </label>
             <input
+              defaultValue={model}
               name="model"
               type="text"
               placeholder="Model no :"
@@ -57,6 +90,7 @@ const UpdateProduct = () => {
               <span className="label-text">Update Photo:</span>
             </label>
             <input
+              defaultValue={photo}
               name="photo"
               type="text"
               placeholder="Product photo"
@@ -69,6 +103,7 @@ const UpdateProduct = () => {
               <span className="label-text">Update Price:</span>
             </label>
             <input
+              defaultValue={price}
               name="price"
               type="text"
               placeholder="Price of product"
@@ -83,6 +118,7 @@ const UpdateProduct = () => {
               <span className="label-text">Update Category:</span>
             </label>
             <input
+              defaultValue={category}
               name="category"
               type="text"
               placeholder="Type of product"
@@ -95,6 +131,7 @@ const UpdateProduct = () => {
               <span className="label-text">Update Rating:</span>
             </label>
             <input
+              defaultValue={rating}
               name="rating"
               type="text"
               placeholder="Rating of product"
@@ -108,6 +145,7 @@ const UpdateProduct = () => {
             <span className="label-text">Update Description:</span>
           </label>
           <input
+            defaultValue={description}
             name="description"
             type="text"
             placeholder="Short description"

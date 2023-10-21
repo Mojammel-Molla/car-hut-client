@@ -78,13 +78,13 @@ const Login = () => {
         <div className="form-control mt-6">
           <button className="btn btn-primary">Login</button>
         </div>
-        <div className="flex justify-between mt-5">
+        <div className="flex justify-center mt-5">
           <button onClick={handleGoogle} className="btn">
             <FcGoogle className="text-2xl mt-1"></FcGoogle>Google
           </button>
-          <button onClick={handleGithub} className="btn">
+          {/* <button onClick={handleGithub} className="btn">
             <FaGithub></FaGithub> Github
-          </button>
+          </button> */}
         </div>
       </form>
       <Toaster position="top-center" reverseOrder={false} />

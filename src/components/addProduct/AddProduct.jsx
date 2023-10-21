@@ -1,5 +1,4 @@
-import React from 'react';
-
+import Swal from 'sweetalert2';
 const AddProduct = () => {
   const handleAddProduct = e => {
     e.preventDefault();
@@ -22,6 +21,39 @@ const AddProduct = () => {
       description,
     };
     console.log(newProduct);
+    // // post data of Toyota
+    // fetch('https://car-hut-server-nkl9gnsf2-mojammel-mollas-projects.vercel.app/toyota', {
+    //   method: 'POST',
+    //   headers: {
+    //     'content-type': 'application/json',
+    //   },
+    //   body: JSON.stringify(newProduct),
+    // });
+
+    // post data of all products
+    fetch(
+      'https://car-hut-server-nkl9gnsf2-mojammel-mollas-projects.vercel.app/products',
+      {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json',
+        },
+        body: JSON.stringify(newProduct),
+      }
+    )
+      .then(res => res.json())
+      .then(data => {
+        console.log(data);
+        form.reset();
+        if (data.insertedId > 0) {
+          Swal.fire({
+            position: 'top-center',
+            icon: 'success',
+            title: 'Your product has been added',
+            showConfirmButton: false,
+          });
+        }
+      });
   };
   return (
     <div>
