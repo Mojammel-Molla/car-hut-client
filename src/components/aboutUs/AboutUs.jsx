@@ -6,7 +6,7 @@ const AboutUs = () => {
       <div className="hero-content flex-col lg:flex-row">
         <img src={TeamImg} className="lg:max-w-lg rounded-lg shadow-2xl" />
         <div>
-          <h1 className="text-5xl font-bold">About Us</h1>
+          <h1 className="lg:text-5xl font-bold">About Us</h1>
           <p className="py-6">
             Welcome to our comprehensive car website, your ultimate destination
             for all things automotive. Explore an extensive range of vehicle

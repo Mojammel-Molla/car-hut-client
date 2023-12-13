@@ -8,7 +8,7 @@ const ContactUs = () => {
         <div className="p-20  text-center  mx-auto">
           <GrMailOption className="text-2xl ml-20"></GrMailOption>
 
-          <h2 className="font-semibold">info@eventparadise.com</h2>
+          <h2 className="font-semibold lg:ml-6">info@carhut.com</h2>
         </div>
         <div className="lg:p-20  text-center  mx-auto">
           <MdLocationOn className="text-2xl ml-20"></MdLocationOn>

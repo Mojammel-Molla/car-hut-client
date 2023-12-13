@@ -2,7 +2,7 @@ import { useLoaderData } from 'react-router-dom';
 import Swal from 'sweetalert2';
 const UpdateProduct = () => {
   const updatedData = useLoaderData();
-  const { brand, model, photo, price, category, rating, description } =
+  const { _id, brand, model, photo, price, category, rating, description } =
     updatedData || {};
   console.log(updatedData);
 
@@ -27,9 +27,8 @@ const UpdateProduct = () => {
       description,
     };
     console.log(newProduct);
-
     fetch(
-      'https://car-hut-server-nkl9gnsf2-mojammel-mollas-projects.vercel.app/products',
+      `https://car-hut-server-gqfbpbiz9-mojammel-mollas-projects.vercel.app/update/${_id}`,
       {
         method: 'PUT',
         headers: {

@@ -1,7 +1,9 @@
+import { useState } from 'react';
 import Swal from 'sweetalert2';
 
 const SingleCart = ({ item }) => {
-  const { _id, brand, model, photo, price, category, rating } = item || {};
+  const [cartItem, setCartItem] = useState(item);
+  const { _id, brand, model, photo, price, category, rating } = cartItem || {};
 
   const handleDelete = _id => {
     console.log(_id);
@@ -16,7 +18,7 @@ const SingleCart = ({ item }) => {
     }).then(result => {
       if (result.isConfirmed) {
         fetch(
-          `https://car-hut-server-nkl9gnsf2-mojammel-mollas-projects.vercel.app/cart/${_id}`,
+          `https://car-hut-server-gqfbpbiz9-mojammel-mollas-projects.vercel.app/cart/${_id}`,
           {
             method: 'DELETE',
           }
@@ -31,6 +33,7 @@ const SingleCart = ({ item }) => {
                 'success'
               );
             }
+            setCartItem(data);
           });
       }
     });

@@ -13,7 +13,7 @@ const AllProducts = () => {
   );
   useEffect(() => {
     fetch(
-      `https://car-hut-server-nkl9gnsf2-mojammel-mollas-projects.vercel.app/products`
+      `https://car-hut-server-gqfbpbiz9-mojammel-mollas-projects.vercel.app/products`
     )
       .then(res => res.json())
       .then(data => {

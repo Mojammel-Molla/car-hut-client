@@ -9,11 +9,20 @@ const CardDetails = () => {
 
   const { user } = useContext(AuthContext);
   const email = user.email;
-  const userData = { ...product, email };
+  const userData = {
+    brand,
+    model,
+    photo,
+    price,
+    category,
+    rating,
+    description,
+    email,
+  };
 
   const handleCartData = () => {
     fetch(
-      'https://car-hut-server-nkl9gnsf2-mojammel-mollas-projects.vercel.app/cart',
+      'https://car-hut-server-gqfbpbiz9-mojammel-mollas-projects.vercel.app/cart',
       {
         method: 'POST',
         headers: {

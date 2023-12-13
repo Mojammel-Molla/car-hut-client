@@ -6,7 +6,7 @@ const MyCart = () => {
 
   useEffect(() => {
     fetch(
-      `https://car-hut-server-nkl9gnsf2-mojammel-mollas-projects.vercel.app/cart`
+      `https://car-hut-server-gqfbpbiz9-mojammel-mollas-projects.vercel.app/cart`
     )
       .then(res => res.json())
       .then(data => {

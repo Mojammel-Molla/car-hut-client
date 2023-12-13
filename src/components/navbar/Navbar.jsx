@@ -22,11 +22,16 @@ const Navbar = () => {
           Add Product
         </NavLink>
       </li>
-      {/* <li>
-        <NavLink to="/updateProduct">Update Product</NavLink>
-      </li> */}
       <li>
-        <NavLink to="/login">Log in</NavLink>
+        <NavLink to="/reviews" className="mr-5">
+          Reviews
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/contact-us">Contact Us</NavLink>
+      </li>
+      <li>
+        <NavLink to="/login">{user ? 'Log out' : 'Log in'}</NavLink>
       </li>
     </>
   );
@@ -77,9 +82,9 @@ const Navbar = () => {
             <img className="w-12 h-12 rounded-full" src={UserImg} />
           )}
           <Link to="/login">
-            <a onClick={handleLogOut} className="btn">
+            <p onClick={handleLogOut} className="btn">
               {user ? 'Log out' : 'Login'}
-            </a>
+            </p>
           </Link>
         </div>
       </div>

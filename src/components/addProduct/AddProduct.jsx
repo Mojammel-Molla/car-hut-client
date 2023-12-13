@@ -21,18 +21,9 @@ const AddProduct = () => {
       description,
     };
     console.log(newProduct);
-    // // post data of Toyota
-    // fetch('https://car-hut-server-nkl9gnsf2-mojammel-mollas-projects.vercel.app/toyota', {
-    //   method: 'POST',
-    //   headers: {
-    //     'content-type': 'application/json',
-    //   },
-    //   body: JSON.stringify(newProduct),
-    // });
 
-    // post data of all products
     fetch(
-      'https://car-hut-server-nkl9gnsf2-mojammel-mollas-projects.vercel.app/products',
+      'https://car-hut-server-gqfbpbiz9-mojammel-mollas-projects.vercel.app/products',
       {
         method: 'POST',
         headers: {

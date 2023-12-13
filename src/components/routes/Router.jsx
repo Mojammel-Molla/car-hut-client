@@ -10,6 +10,8 @@ import UpdateProduct from '../updateProduct/UpdateProduct';
 import AllProducts from '../allProducts/AllProducts';
 import ErrorPage from '../errorPage/ErrorPage';
 import CardDetails from '../cardDetails/CardDetails';
+import ContactPage from '../contact-page/ContactPage';
+import Reviews from '../reviews.jsx/reviews';
 
 const Router = createBrowserRouter([
   {
@@ -27,6 +29,14 @@ const Router = createBrowserRouter([
         element: <AllProducts></AllProducts>,
       },
       {
+        path: '/contact-us',
+        element: <ContactPage></ContactPage>,
+      },
+      {
+        path: '/reviews',
+        element: <Reviews></Reviews>,
+      },
+      {
         path: '/product/:id',
         element: (
           <PrivateRoute>
@@ -35,7 +45,7 @@ const Router = createBrowserRouter([
         ),
         loader: ({ params }) => {
           return fetch(
-            `https://car-hut-server-nkl9gnsf2-mojammel-mollas-projects.vercel.app/product/${params.id}`
+            `https://car-hut-server-gqfbpbiz9-mojammel-mollas-projects.vercel.app/product/${params.id}`
           );
         },
       },
@@ -49,10 +59,14 @@ const Router = createBrowserRouter([
       },
       {
         path: '/updateProduct/:id',
-        element: <UpdateProduct></UpdateProduct>,
+        element: (
+          <PrivateRoute>
+            <UpdateProduct></UpdateProduct>
+          </PrivateRoute>
+        ),
         loader: ({ params }) => {
           return fetch(
-            `https://car-hut-server-nkl9gnsf2-mojammel-mollas-projects.vercel.app/update/${params.id}`
+            `https://car-hut-server-gqfbpbiz9-mojammel-mollas-projects.vercel.app/update/${params.id}`
           );
         },
       },
@@ -64,7 +78,7 @@ const Router = createBrowserRouter([
           </PrivateRoute>
         ),
         // loader: ({ params }) => {
-        //   return fetch(`https://car-hut-server-nkl9gnsf2-mojammel-mollas-projects.vercel.app/cart/${params.id}`);
+        //   return fetch(`https://car-hut-server-gqfbpbiz9-mojammel-mollas-projects.vercel.app/cart/${params.id}`);
         // },
       },
       {
