@@ -1,9 +1,16 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
+import useAxios from '../../hooks/useAxios';
 
 const CardDetails = () => {
   const product = useLoaderData();
+
+  // const axios = useAxios()
+  // useEffect(() => {
+  //   axios.get(`/`)
+  // },[axios])
+
   const { brand, model, photo, price, category, rating, description } =
     product || {};
 

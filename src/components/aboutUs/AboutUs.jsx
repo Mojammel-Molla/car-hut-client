@@ -1,4 +1,3 @@
-import React from 'react';
 import TeamImg from '../../assets/about.banner.webp';
 const AboutUs = () => {
   return (

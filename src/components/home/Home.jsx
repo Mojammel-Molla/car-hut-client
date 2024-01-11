@@ -9,7 +9,7 @@ const Home = () => {
   const axios = useAxios();
   const [brands, setBrands] = useState([]);
   useEffect(() => {
-    axios.get('/brands').then(res => {
+    axios.get('/brand-name').then(res => {
       setBrands(res.data);
     });
   }, [axios]);
