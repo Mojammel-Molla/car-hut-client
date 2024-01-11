@@ -5,7 +5,7 @@ const Reviews = () => {
   const { user } = useContext(AuthContext);
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
-    fetch('https://car-hut-server-theta.vercel.app/reviews')
+    fetch('http://localhost:5000/reviews')
       .then(res => res.json())
       .then(data => setReviews(data));
   }, []);
@@ -18,7 +18,7 @@ const Reviews = () => {
 
     const newReview = { name, comment };
     console.log(newReview);
-    fetch('https://car-hut-server-theta.vercel.app/reviews', {
+    fetch('http://localhost:5000/reviews', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
