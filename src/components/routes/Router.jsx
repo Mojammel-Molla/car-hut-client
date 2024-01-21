@@ -12,6 +12,7 @@ import ErrorPage from '../errorPage/ErrorPage';
 import CardDetails from '../cardDetails/CardDetails';
 import ContactPage from '../contact-page/ContactPage';
 import Reviews from '../reviews.jsx/reviews';
+import Blogs from '../blogs/Blogs';
 
 const Router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const Router = createBrowserRouter([
         path: '/',
         element: <Home></Home>,
         loader: () => fetch('http://localhost:5000/brands'),
+      },
+      {
+        path: '/blog',
+        element: <Blogs></Blogs>,
       },
       {
         path: '/brand/:brand',
