@@ -80,8 +80,11 @@ const Navbar = () => {
         <div className="navbar-end">
           {user ? (
             <div className="lg:mr-3">
-              <img className="w-12 h-12 rounded-full" src={user?.photoURL} />
-              <h1 className="font-medium mr-2">{user?.displayName}</h1>
+              <img
+                className="w-12 h-12 mx-auto rounded-full"
+                src={user?.photoURL}
+              />
+              <h1 className="font-medium">{user?.displayName}</h1>
             </div>
           ) : (
             <img className="w-12 h-12 rounded-full" src={UserImg} />

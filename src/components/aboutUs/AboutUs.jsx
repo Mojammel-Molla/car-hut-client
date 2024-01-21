@@ -2,7 +2,7 @@ import TeamImg from '../../assets/about.banner.webp';
 const AboutUs = () => {
   return (
     <div className="hero bg-base-100 mt-20 border-t-2 pt-3">
-      <div className="hero-content flex-col lg:flex-row">
+      <div className="hero-content flex-col md:gap-12 lg:flex-row">
         <img src={TeamImg} className="lg:max-w-lg rounded-lg shadow-2xl" />
         <div>
           <h1 className="lg:text-5xl font-bold">About Us</h1>
