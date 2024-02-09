@@ -1,28 +1,28 @@
 const Footer = () => {
   return (
-    <footer className="footer p-10 bg-base-200 text-base-content w-full  mx-auto mt-10">
+    <footer className="footer p-10 bg-base-300 text-base-content w-full mx-auto flex-col justify-around mt-10">
       <nav>
         <header className="footer-title">Best Services</header>
-        <a className="link link-hover">Top Brand</a>
-        <a className="link link-hover">Unique Design</a>
-        <a className="link link-hover">Comfort First</a>
-        <a className="link link-hover">First Hand</a>
+        <a className="link link-hover font-medium">Top Brand</a>
+        <a className="link link-hover font-medium">Unique Design</a>
+        <a className="link link-hover font-medium">Comfort First</a>
+        <a className="link link-hover font-medium">First Hand</a>
       </nav>
       <nav>
         <header className="footer-title"> About us</header>
-        <a className="link link-hover">Contact</a>
-        <a className="link link-hover">Delivery</a>
-        <a className="link link-hover">Warranty</a>
-        <a className="link link-hover">Documents</a>
+        <a className="link link-hover font-medium">Contact</a>
+        <a className="link link-hover font-medium">Delivery</a>
+        <a className="link link-hover font-medium">Warranty</a>
+        <a className="link link-hover font-medium">Documents</a>
       </nav>
       <nav>
         <header className="footer-title">Legal Vehicles</header>
-        <a className="link link-hover">Terms of use</a>
-        <a className="link link-hover">Security policy</a>
-        <a className="link link-hover">Safety policy</a>
+        <a className="link link-hover font-medium">Terms of use</a>
+        <a className="link link-hover font-medium">Security policy</a>
+        <a className="link link-hover font-medium">Safety policy</a>
       </nav>
       <form>
-        <header className="footer-title">Newsletter</header>
+        <header className="font-bold text-3xl text-orange-900 ">Car Hut</header>
         <fieldset className="form-control w-80">
           <label className="label">
             <span className="label-text">Enter your email address</span>
@@ -33,7 +33,7 @@ const Footer = () => {
               placeholder="username@site.com"
               className="input input-bordered w-full pr-16"
             />
-            <button className="btn btn-primary absolute top-0 right-0 rounded-l-none">
+            <button className="btn bg-orange-700 text-white absolute top-0 right-0 rounded-l-none">
               For query
             </button>
           </div>
