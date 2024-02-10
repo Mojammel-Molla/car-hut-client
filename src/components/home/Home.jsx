@@ -4,6 +4,7 @@ import AboutUs from '../aboutUs/AboutUs';
 import ContactUs from '../contactUs/ContactUs';
 import useAxios from './../../hooks/useAxios';
 import { useEffect, useState } from 'react';
+import Reviews from '../reviews.jsx/reviews';
 
 const Home = () => {
   const axios = useAxios();
@@ -24,6 +25,7 @@ const Home = () => {
       </div>
       <AboutUs></AboutUs>
       <ContactUs></ContactUs>
+      <Reviews></Reviews>
     </div>
   );
 };
