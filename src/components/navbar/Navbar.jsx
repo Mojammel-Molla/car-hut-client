@@ -7,37 +7,39 @@ const Navbar = () => {
 
   const navLinks = (
     <>
-      <li>
-        <NavLink to="/" className="mr-5">
-          Home
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to="/blog" className="mr-5">
-          Blog
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to="/cart" className="mr-5">
-          My Cart
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to="/addProduct" className="mr-5">
-          Add Product
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to="/reviews" className="mr-5">
-          Reviews
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to="/contact-us">Contact Us</NavLink>
-      </li>
-      <li>
-        <NavLink to="/login">{user ? 'Log out' : 'Log in'}</NavLink>
-      </li>
+      <NavLink
+        className={({ isActive }) =>
+          isActive ? 'font-bold underline text-orange-700' : ' '
+        }
+        to="/"
+      >
+        <li>Home</li>
+      </NavLink>
+
+      <NavLink to="/blog">
+        <li>Blog</li>
+      </NavLink>
+
+      <NavLink to="/cart">
+        <li>My Cart</li>
+      </NavLink>
+
+      <NavLink to="/addProduct">
+        <li>Add Product</li>
+      </NavLink>
+
+      <NavLink to="/reviews">
+        <li>Reviews</li>
+      </NavLink>
+
+      <NavLink to="/contact-us">
+        <li>Contact Us</li>
+      </NavLink>
+
+      <NavLink to="/login">
+        {' '}
+        <li>{user ? 'Log out' : 'Log in'}</li>
+      </NavLink>
     </>
   );
 
@@ -46,7 +48,7 @@ const Navbar = () => {
   };
   return (
     <>
-      <div className="navbar bg-base-100 shadow-md">
+      <div className="navbar mx-3 w-full bg-base-100 shadow-md">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -72,10 +74,12 @@ const Navbar = () => {
               {navLinks}
             </ul>
           </div>
-          <a className="btn btn-ghost font-extrabold text-4xl">Car Hut</a>
+          <a className="first-letter:md:text-6xl sm:text-3xl first-letter:text-orange-700  font-extrabold text-4xl">
+            Car Hut
+          </a>
         </div>
-        <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{navLinks}</ul>
+        <div className="navbar-center hidden lg:flex font-semibold">
+          <ul className="menu menu-horizontal gap-5 px-1">{navLinks}</ul>
         </div>
         <div className="navbar-end">
           {user ? (
