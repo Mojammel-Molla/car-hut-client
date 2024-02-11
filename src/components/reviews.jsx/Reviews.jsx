@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../provider/AuthProvider';
+import SectionTitle from '../../shared/section-title/SectionTitle';
 
 const Reviews = () => {
   const { user } = useContext(AuthContext);
@@ -36,7 +37,8 @@ const Reviews = () => {
   };
   return (
     <div>
-      <div>
+      <SectionTitle title="Testimonials"></SectionTitle>
+      {/* <div>
         <h1 className="lg:text-4xl font-bold text-center my-5">
           Client Reviews
         </h1>
@@ -67,7 +69,7 @@ const Reviews = () => {
             <button className="btn text-white btn-primary ">Post review</button>
           </div>
         </form>
-      </div>
+      </div> */}
       <div className="divider"></div>
       <div className="grid gap-5 lg:grid-cols-4 md:grid-cols-2">
         {reviews.length > 0 &&

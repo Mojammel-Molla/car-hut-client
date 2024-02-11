@@ -1,9 +1,10 @@
 import { GrPhone, GrMailOption } from 'react-icons/gr';
 import { MdLocationOn } from 'react-icons/md';
+import SectionTitle from '../../shared/section-title/SectionTitle';
 const ContactUs = () => {
   return (
     <div>
-      <h1 className="text-4xl text-center font-bold my-10">Contact Us</h1>
+      <SectionTitle title="Contact Us"></SectionTitle>
       <section className="grid mt-5 gap-3 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1">
         <div className="lg:p-20 shadow-2xl text-center rounded-2xl mx-auto">
           <GrMailOption className="text-2xl ml-20"></GrMailOption>

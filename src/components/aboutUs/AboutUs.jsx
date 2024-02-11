@@ -1,11 +1,12 @@
 import TeamImg from '../../assets/about.banner.webp';
+import SectionTitle from '../../shared/section-title/SectionTitle';
 const AboutUs = () => {
   return (
     <div className="hero bg-base-100 mt-20 border-t-2 pt-3">
       <div className="hero-content flex-col md:gap-12 lg:flex-row">
         <img src={TeamImg} className="lg:max-w-lg rounded-lg shadow-2xl" />
         <div>
-          <h1 className="lg:text-5xl font-bold">About Us</h1>
+          <SectionTitle title="About Us"></SectionTitle>
           <p className="py-6">
             Welcome to our comprehensive car website, your ultimate destination
             for all things automotive. Explore an extensive range of vehicle
