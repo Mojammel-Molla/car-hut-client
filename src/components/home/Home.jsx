@@ -1,11 +1,10 @@
-import Brand from '../aboutUs/brand/Brand';
-import Banner from '../addProduct/banner/Banner';
-import AboutUs from '../aboutUs/AboutUs';
 import ContactUs from '../contactUs/ContactUs';
 import useAxios from './../../hooks/useAxios';
 import { useEffect, useState } from 'react';
-import Reviews from '../reviews.jsx/reviews';
+import Reviews from '../../home-page/reviews.jsx/reviews';
 import AllBrands from '../all-brands/AllBrands';
+import Banner from '../../home-page/banner/Banner';
+import AboutUs from '../../home-page/aboutUs/AboutUs';
 
 const Home = () => {
   const axios = useAxios();

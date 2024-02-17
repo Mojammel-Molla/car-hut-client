@@ -15,11 +15,6 @@ const Navbar = () => {
       >
         <li>Home</li>
       </NavLink>
-
-      <NavLink to="/blog">
-        <li>Blog</li>
-      </NavLink>
-
       <NavLink to="/cart">
         <li>My Cart</li>
       </NavLink>
@@ -30,6 +25,15 @@ const Navbar = () => {
 
       <NavLink to="/reviews">
         <li>Reviews</li>
+      </NavLink>
+
+      <NavLink
+        className={({ isActive }) =>
+          isActive ? 'font-bold underline text-orange-700' : ' '
+        }
+        to="/blog"
+      >
+        <li>Blog</li>
       </NavLink>
 
       <NavLink to="/contact-us">
@@ -48,7 +52,7 @@ const Navbar = () => {
   };
   return (
     <>
-      <div className="navbar mx-3 w-full bg-base-100 shadow-md">
+      <div className="navbar px-5 w-full bg-base-100 shadow-md">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">

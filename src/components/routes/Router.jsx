@@ -11,7 +11,7 @@ import AllProducts from '../allProducts/AllProducts';
 import ErrorPage from '../errorPage/ErrorPage';
 import CardDetails from '../cardDetails/CardDetails';
 import ContactPage from '../contact-page/ContactPage';
-import Reviews from '../reviews.jsx/reviews';
+import Reviews from '../../home-page/reviews.jsx/reviews';
 import Blogs from '../blogs/Blogs';
 
 const Router = createBrowserRouter([

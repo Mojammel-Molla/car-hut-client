@@ -71,11 +71,11 @@ const Reviews = () => {
         </form>
       </div> */}
       <div className="divider"></div>
-      <div className="grid gap-5 lg:grid-cols-4 md:grid-cols-2">
+      <div className="grid gap-5 max-w-[1440px] mx-auto lg:grid-cols-4 md:grid-cols-2">
         {reviews.length > 0 &&
           reviews?.map(review => (
             // <p key={review?.review_id}>{review?.client_name}</p>
-            <div key={review?._id} className="card w-96 bg-base-100 shadow-xl">
+            <div key={review?._id} className="card w-80 bg-base-100 shadow-xl">
               <div className="card-body">
                 <h2 className="card-title">{review?.name}</h2>
                 <p>{review?.comment}</p>

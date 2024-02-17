@@ -1,5 +1,5 @@
-import Brand from '../aboutUs/brand/Brand';
-import SectionTitle from './../../shared/section-title/Sectiontitle';
+import Brand from '../../home-page/brand/Brand';
+import SectionTitle from '../../shared/section-title/SectionTitle';
 
 const AllBrands = ({ brands }) => {
   return (
