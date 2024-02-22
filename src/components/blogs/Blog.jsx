@@ -18,7 +18,10 @@ const Blog = ({ blog, isShow, setIsShow }) => {
           ) : (
             <p className="py-6">{blog_description.slice(0, 200)}</p>
           )}
-          <button onClick={() => setIsShow(!isShow)} className="mb-5 p-5">
+          <button
+            onClick={() => setIsShow(!isShow)}
+            className="mb-5 p-5 font-bold"
+          >
             {isShow ? 'See Less...' : 'See More...'}
           </button>
           <div className="flex justify-between">

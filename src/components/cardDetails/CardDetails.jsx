@@ -2,6 +2,7 @@ import { useContext, useEffect } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
 import useAxios from '../../hooks/useAxios';
+import SectionTitle from '../../shared/section-title/SectionTitle';
 
 const CardDetails = () => {
   const product = useLoaderData();
@@ -44,9 +45,33 @@ const CardDetails = () => {
       });
   };
 
+  const handleAddReview = e => {
+    e.preventDefault();
+    const form = e.target;
+    const name = form.name.value;
+    const comment = form.comment.value;
+
+    const newReview = { name, comment };
+    console.log(newReview);
+    fetch('http://localhost:5000/reviews', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify(newReview),
+    })
+      .then(res => res.json())
+      .then(data => {
+        console.log(data);
+        if (data.insertedId) {
+          alert('Your review has been posted');
+          form.rest();
+        }
+      });
+  };
   return (
-    <div>
-      <div className="card w-1/4 mx-auto mt-20 bg-base-100 shadow-xl bottom-2">
+    <div className="flex justify-between gap-5 w-full">
+      <div className="card w-1/3 mx-auto mt-20 bg-base-100 shadow-xl bottom-2">
         <figure className="w-full">
           <img className="h-60 w-96" src={photo} />
         </figure>
@@ -79,6 +104,36 @@ const CardDetails = () => {
             </button>
           </div>
         </div>
+      </div>
+      <div className="w-1/2">
+        <SectionTitle title="Tell Your Experience"></SectionTitle>
+        <form onSubmit={handleAddReview} className="w-2/4 mx-auto ">
+          <div className="form-control ">
+            <label className="label">
+              <span className="label-text">Name</span>
+            </label>
+            <input
+              name="name"
+              type="text"
+              defaultValue={user?.displayName}
+              className="input input-bordered"
+              required
+            />
+          </div>
+          <div className="form-control ">
+            <label className="label">
+              <span className="label-text">Review</span>
+            </label>
+            <textarea
+              name="comment"
+              className="textarea textarea-bordered"
+              placeholder="Write your comment here"
+            ></textarea>
+          </div>
+          <div className="form-control  mt-6">
+            <button className="btn text-white btn-primary ">Post review</button>
+          </div>
+        </form>
       </div>
     </div>
   );

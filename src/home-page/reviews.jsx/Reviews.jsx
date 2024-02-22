@@ -1,7 +1,12 @@
 import { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../provider/AuthProvider';
 import SectionTitle from '../../shared/section-title/SectionTitle';
-
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { Pagination, Navigation } from 'swiper/modules';
+import UserImage from '../../assets/userImage.jpg';
 const Reviews = () => {
   const { user } = useContext(AuthContext);
   const [reviews, setReviews] = useState([]);
@@ -11,78 +16,40 @@ const Reviews = () => {
       .then(data => setReviews(data));
   }, []);
 
-  const handleReview = e => {
-    e.preventDefault();
-    const form = e.target;
-    const name = form.name.value;
-    const comment = form.comment.value;
-
-    const newReview = { name, comment };
-    console.log(newReview);
-    fetch('http://localhost:5000/reviews', {
-      method: 'POST',
-      headers: {
-        'content-type': 'application/json',
-      },
-      body: JSON.stringify(newReview),
-    })
-      .then(res => res.json())
-      .then(data => {
-        console.log(data);
-        if (data.insertedId) {
-          alert('Your review has been posted');
-          form.rest();
-        }
-      });
-  };
   return (
-    <div>
+    <div className="my-16">
       <SectionTitle title="Testimonials"></SectionTitle>
-      {/* <div>
-        <h1 className="lg:text-4xl font-bold text-center my-5">
-          Client Reviews
-        </h1>
-        <form onSubmit={handleReview} className="w-2/4 mx-auto">
-          <div className="form-control ">
-            <label className="label">
-              <span className="label-text">Name</span>
-            </label>
-            <input
-              name="name"
-              type="text"
-              defaultValue={user?.displayName}
-              className="input input-bordered"
-              required
-            />
-          </div>
-          <div className="form-control ">
-            <label className="label">
-              <span className="label-text">Review</span>
-            </label>
-            <textarea
-              name="comment"
-              className="textarea textarea-bordered"
-              placeholder="Write your comment here"
-            ></textarea>
-          </div>
-          <div className="form-control  mt-6">
-            <button className="btn text-white btn-primary ">Post review</button>
-          </div>
-        </form>
-      </div> */}
+
       <div className="divider"></div>
-      <div className="grid gap-5 max-w-[1440px] mx-auto lg:grid-cols-4 md:grid-cols-2">
-        {reviews.length > 0 &&
-          reviews?.map(review => (
-            // <p key={review?.review_id}>{review?.client_name}</p>
-            <div key={review?._id} className="card w-80 bg-base-100 shadow-xl">
-              <div className="card-body">
-                <h2 className="card-title">{review?.name}</h2>
-                <p>{review?.comment}</p>
-                <div className="card-actions justify-end"></div>
-              </div>
-            </div>
-          ))}
+      <div className=" max-w-[1440px] h-96 mx-auto">
+        <Swiper
+          pagination={{
+            type: 'progressbar',
+          }}
+          navigation={true}
+          modules={[Pagination, Navigation]}
+          className="mySwiper"
+        >
+          {reviews.length > 0 &&
+            reviews?.map(review => (
+              <SwiperSlide key={review?._id}>
+                <div className="card w-1/2 mx-auto h-60 my-10 bg-base-100 shadow-xl">
+                  <div className="card-body">
+                    <div className="flex gap-3">
+                      <img
+                        className="h-10 w-10 rounded-full"
+                        src={UserImage}
+                        alt=""
+                      />
+                      <h2 className="card-title ">{review?.name}</h2>
+                    </div>
+                    <p>{review?.comment}</p>
+                    <div className="card-actions justify-end"></div>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+        </Swiper>
       </div>
     </div>
   );
