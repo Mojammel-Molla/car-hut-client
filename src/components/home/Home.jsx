@@ -6,6 +6,7 @@ import AllBrands from '../all-brands/AllBrands';
 import Banner from '../../home-page/banner/Banner';
 import AboutUs from '../../home-page/aboutUs/AboutUs';
 import BlogSection from '../../home-page/blog-section/BlogSection';
+import Promotions from '../../home-page/promotions/Promotions';
 
 const Home = () => {
   const axios = useAxios();
@@ -22,6 +23,7 @@ const Home = () => {
       <AboutUs></AboutUs>
       <ContactUs></ContactUs>
       <BlogSection></BlogSection>
+      <Promotions></Promotions>
       <Reviews></Reviews>
     </div>
   );

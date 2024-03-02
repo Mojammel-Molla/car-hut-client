@@ -28,7 +28,7 @@ const Reviews = () => {
           }}
           navigation={true}
           modules={[Pagination, Navigation]}
-          className="mySwiper"
+          className="mySwiper "
         >
           {reviews.length > 0 &&
             reviews?.map(review => (
