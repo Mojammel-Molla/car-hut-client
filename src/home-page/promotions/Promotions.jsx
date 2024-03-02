@@ -8,16 +8,16 @@ const Promotions = () => {
         backgroundImage: `url(${PromotionBanner})`,
       }}
     >
-      <div className="hero-overlay bg-opacity-60"></div>
-      <div className="hero-content text-start text-neutral-content">
-        <div className="max-w-md text-start">
-          <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-          <p className="mb-5">
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
-          </p>
-          <button className="btn btn-primary">Get Started</button>
+      <div className=" bg-opacity-30"></div>
+      <div className="w-full lg:px-20  text-start text-white">
+        <div className="max-w-xl w-full items-start ">
+          <h3 className="mb-5 text-2xl font-bold">
+            GET AN EXTRA 20% OFF YOUR FIRST ORDER
+          </h3>
+          <h1 className="mb-5 font-bold text-5xl">
+            Enjoy your journey with our comfortable cars.
+          </h1>
+          <button className="btn ">Shop Now</button>
         </div>
       </div>
     </div>

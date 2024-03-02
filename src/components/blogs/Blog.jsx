@@ -8,7 +8,7 @@ const Blog = ({ blog, isShow, setIsShow }) => {
     writer_image,
   } = blog || {};
   return (
-    <div className="hero min-h-[80vh] bg-base-200">
+    <div className="hero min-h-[80vh] bg-base-100 border-b-2">
       <div className="hero-content flex-col lg:flex-row">
         <img src={blog_image} className="max-w-lg rounded-lg shadow-2xl" />
         <div className="pt-10">
