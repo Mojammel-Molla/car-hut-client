@@ -7,6 +7,7 @@ import Banner from '../../home-page/banner/Banner';
 import AboutUs from '../../home-page/aboutUs/AboutUs';
 import BlogSection from '../../home-page/blog-section/BlogSection';
 import Promotions from '../../home-page/promotions/Promotions';
+import OurServices from '../../home-page/our-services/OurServices';
 
 const Home = () => {
   const axios = useAxios();
@@ -20,11 +21,12 @@ const Home = () => {
     <div className="">
       <Banner></Banner>
       <AllBrands brands={brands}></AllBrands>
-      <AboutUs></AboutUs>
-      <ContactUs></ContactUs>
-      <BlogSection></BlogSection>
       <Promotions></Promotions>
+      <BlogSection></BlogSection>
+      <AboutUs></AboutUs>
+      <OurServices></OurServices>
       <Reviews></Reviews>
+      <ContactUs></ContactUs>
     </div>
   );
 };
