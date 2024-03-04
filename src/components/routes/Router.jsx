@@ -13,6 +13,7 @@ import CardDetails from '../cardDetails/CardDetails';
 import ContactPage from '../contact-page/ContactPage';
 import Reviews from '../../home-page/reviews.jsx/reviews';
 import Blogs from '../blogs/Blogs';
+import Dashboard from '../../dashboard-components/dashbaord/Dashboard';
 
 const Router = createBrowserRouter([
   {
@@ -95,6 +96,10 @@ const Router = createBrowserRouter([
         element: <Register></Register>,
       },
     ],
+  },
+  {
+    path: '/dashboard',
+    element: <Dashboard></Dashboard>,
   },
 ]);
 

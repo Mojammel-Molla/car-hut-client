@@ -36,8 +36,21 @@ const Navbar = () => {
         <li>Blogs</li>
       </NavLink>
 
-      <NavLink to="/contact-us">
+      <NavLink
+        to="/contact-us"
+        className={({ isActive }) =>
+          isActive ? 'font-bold underline text-orange-700' : ' '
+        }
+      >
         <li>Contact Us</li>
+      </NavLink>
+      <NavLink
+        to="/dashboard"
+        className={({ isActive }) =>
+          isActive ? 'font-bold underline text-orange-700' : ' '
+        }
+      >
+        <li>Dashboard</li>
       </NavLink>
 
       <NavLink to="/login">
