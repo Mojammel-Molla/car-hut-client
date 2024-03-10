@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
 import UserImg from '../../assets/userImage.jpg';
+import Logo from '../../assets/logo.png';
 const Navbar = () => {
   const { user, logOutUser } = useContext(AuthContext);
 
@@ -91,9 +92,12 @@ const Navbar = () => {
               {navLinks}
             </ul>
           </div>
-          <a className="first-letter:md:text-6xl sm:text-3xl first-letter:text-orange-700  font-extrabold text-4xl">
-            Car Hut
-          </a>
+          <div className="w-36">
+            <img className="h-9 w-13  mx-auto " src={Logo} alt="" />
+            <a className="first-letter:md:text-6xl sm:text-3xl relative first-letter:text-orange-700  font-extrabold text-4xl">
+              <span className="text-5xl">C</span>ar Hut
+            </a>
+          </div>
         </div>
         <div className="navbar-center hidden lg:flex font-semibold">
           <ul className="menu menu-horizontal gap-5 px-1">{navLinks}</ul>

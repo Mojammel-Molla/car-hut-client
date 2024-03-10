@@ -1,12 +1,12 @@
 import BannerImage from '../../assets/car-banner.jpg';
-// import BackgroundImage from '../../assets/hero-banner.png';
+import BackgroundImage from '../../assets/car-hut-banner.jpg';
 const Banner = () => {
   return (
     <>
       <div
-        // style={{
-        //   backgroundImage: `url(${BackgroundImage})`,
-        // }}
+        style={{
+          backgroundImage: `url(${BackgroundImage})`,
+        }}
         className="hero min-h-[90vh]  border-2"
       >
         <div className="hero-content flex-col lg:flex-row-reverse">
