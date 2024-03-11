@@ -52,7 +52,7 @@ const BlogSection = () => {
       </div>
       <div className="w-full text-center">
         <Link to="/blog">
-          <button className="btn bg-orange-800 text-white hover:bg-orange-500">
+          <button className="btn bg-[#d01818] text-white hover:bg-[#253241]">
             See All
           </button>
         </Link>
