@@ -23,8 +23,9 @@ const Banner = () => {
               coupe, we have an extensive inventory to suit every taste and
               budget.
             </p>
-            <button className="btn bg-[#d01818] text-white hover:bg-[#253241]">
+            <button className="font-bold py-3 px-5 rounded-lg relative overflow-hidden bg-[#d01818] text-white  hover:shadow-md hover:bg-[#253241] transition duration-500">
               Buy Now
+              <span className="absolute inset-0 bg-gradient-to-tr from-[#d01818] to-[#253241] opacity-20  duration-3000"></span>
             </button>
           </div>
         </div>
