@@ -92,11 +92,9 @@ const Navbar = () => {
               {navLinks}
             </ul>
           </div>
-          <div className="w-36">
-            <img className="h-9 w-13  mx-auto " src={Logo} alt="" />
-            <a className="first-letter:md:text-6xl sm:text-3xl relative first-letter:text-orange-700  font-extrabold text-4xl">
-              <span className="text-5xl">C</span>ar Hut
-            </a>
+          <div className="w-26">
+            <img className="h-10 w-13  mx-auto " src={Logo} alt="" />
+            <a className="font-extrabold md:text-4xl">Car Hut</a>
           </div>
         </div>
         <div className="navbar-center hidden lg:flex font-semibold">

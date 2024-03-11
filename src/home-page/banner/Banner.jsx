@@ -1,4 +1,4 @@
-import BannerImage from '../../assets/car-banner.jpg';
+import BannerImage from '../../assets/banner-image-1.png';
 import BackgroundImage from '../../assets/car-hut-banner.jpg';
 const Banner = () => {
   return (
@@ -14,7 +14,7 @@ const Banner = () => {
             src={BannerImage}
             className="md:max-w-2xl rounded-lg shadow-xl"
           />
-          <div>
+          <div className="text-white">
             <h1 className="text-5xl font-bold">Buy Your Dream Car Today!</h1>
             <p className="py-6 font-medium">
               Welcome to Car Hut, your premier destination for buying and
@@ -23,7 +23,7 @@ const Banner = () => {
               coupe, we have an extensive inventory to suit every taste and
               budget.
             </p>
-            <button className="btn bg-orange-800 text-white hover:bg-orange-500">
+            <button className="btn bg-[#d01818] text-white hover:bg-[#253241]">
               Buy Now
             </button>
           </div>
