@@ -1,4 +1,4 @@
-import ContactUs from '../contactUs/ContactUs';
+import ContactUs from '../../home-page/contactUs/ContactUs';
 import useAxios from './../../hooks/useAxios';
 import { useEffect, useState } from 'react';
 import Reviews from '../../home-page/reviews.jsx/reviews';

@@ -20,7 +20,7 @@ const Blog = ({ blog, isShow, setIsShow }) => {
           )}
           <button
             onClick={() => setIsShow(!isShow)}
-            className="mb-5 p-5 text-[#d01818] font-bold"
+            className="mb-5 p-5 hover:text-[#d01818] font-bold"
           >
             {isShow ? 'See Less...' : 'See More...'}
           </button>

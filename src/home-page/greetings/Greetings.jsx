@@ -4,7 +4,7 @@ import { FaCarOn } from 'react-icons/fa6';
 import { MdOutlinePlaylistAddCheck } from 'react-icons/md';
 const Greetings = () => {
   return (
-    <div className="lg:h-[100vh] mb-20 border-b-2">
+    <div className="lg:h-[100vh] mb-20 ">
       {/* Section title */}
       <div className="text-center py-10">
         <h6 className="text-xs pb-3 font-bold">

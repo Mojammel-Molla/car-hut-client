@@ -18,7 +18,9 @@ const Promotions = () => {
           <h1 className="mb-5 font-bold text-3xl md:text-5xl">
             Enjoy your journey with our comfortable cars.
           </h1>
-          <button className="btn ">Shop Now</button>
+          <button className="btn hover:bg-[#d01818] hover:text-white">
+            Shop Now
+          </button>
         </div>
       </div>
     </div>

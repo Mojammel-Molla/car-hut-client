@@ -6,7 +6,7 @@ const OurTeams = () => {
           HELPS YOU TO FIND PERFECT CAR
         </h6>
         <h2 className="text-2xl md:text-4xl font-bold">
-          Our Sales<span className="text-[#d01818]">Team</span>
+          Our Sales <span className="text-[#d01818]">Team</span>
         </h2>
       </div>
       <div className="max-w-7xl mx-auto grid grid-cols-4 gap-4">
