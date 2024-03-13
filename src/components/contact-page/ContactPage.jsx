@@ -1,79 +1,23 @@
-import { useRef } from 'react';
-import emailjs from '@emailjs/browser';
-const ContactPage = () => {
-  const form = useRef();
-  const sendEmail = e => {
-    e.preventDefault();
+import ContactDetails from './contact-details/ContactDetails';
+import ContactForm from './contact-form/ContactForm';
+import ContactMap from './contact-map/ContactMap';
 
-    emailjs
-      .sendForm(
-        'service_q94iikh',
-        'template_uu3q73a',
-        form.current,
-        'M8kMUdxUSwqGN3T7G'
-      )
-      .then(
-        result => {
-          console.log(result.text);
-        },
-        error => {
-          console.log(error.text);
-        }
-      );
-  };
+const ContactPage = () => {
   return (
     <div className="w-full ">
-      <div className=" text-center ">
-        <h1 className="lg:text-4xl font-semibold mt-5">Contact Us</h1>
-        <p className="lg:text-xl font-medium mt-2">
-          Want appointment? Fill in the form or send us.
-        </p>
+      <div className=" text-start p-3">
+        <h1 className="lg:text-4xl font-bold mt-5">Contact Us</h1>
+
+        <ContactMap></ContactMap>
       </div>
-      <form
-        ref={form}
-        onSubmit={sendEmail}
-        className="card-body lg:w-1/2 mx-auto"
-      >
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text">Name</span>
-          </label>
-          <input
-            name="name"
-            type="text"
-            placeholder="Name"
-            className="input input-bordered"
-            required
-          />
+      <div className="flex  w-full">
+        <div className="w-1/2">
+          <ContactForm></ContactForm>
         </div>
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text">Email</span>
-          </label>
-          <input
-            name="email"
-            type="email"
-            placeholder="email"
-            className="input input-bordered"
-            required
-          />
+        <div className="w-1/2">
+          <ContactDetails></ContactDetails>
         </div>
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text">Your Massage</span>
-          </label>
-          <textarea
-            name="massage"
-            className="textarea textarea-info"
-            placeholder="Write here"
-          ></textarea>
-        </div>
-        <div className="form-control mt-6">
-          <button type="submit" className="btn btn-primary">
-            Sent Massage
-          </button>
-        </div>
-      </form>
+      </div>
     </div>
   );
 };
