@@ -3,7 +3,6 @@ import Root from '../root/Root';
 import Home from '../home/Home';
 import Login from '../login/Login';
 import Register from '../register/Register';
-import AddProduct from '../addProduct/AddProduct';
 import MyCart from '../myCart/MyCart';
 import PrivateRoute from '../../privateRoute/PrivateRoute';
 import UpdateProduct from '../updateProduct/UpdateProduct';
@@ -13,7 +12,8 @@ import CardDetails from '../cardDetails/CardDetails';
 import ContactPage from '../contact-page/ContactPage';
 import Reviews from '../../home-page/reviews.jsx/reviews';
 import Blogs from '../blogs/Blogs';
-import Dashboard from '../../dashboard-components/dashbaord/Dashboard';
+import Dashboard from '../../dashboard-components/dashboard/Dashboard';
+import AddItems from '../../dashboard-components/add-items/AddItems';
 
 const Router = createBrowserRouter([
   {
@@ -55,14 +55,7 @@ const Router = createBrowserRouter([
           );
         },
       },
-      {
-        path: '/addProduct',
-        element: (
-          <PrivateRoute>
-            <AddProduct></AddProduct>
-          </PrivateRoute>
-        ),
-      },
+
       {
         path: '/updateProduct/:id',
         element: (
@@ -100,6 +93,16 @@ const Router = createBrowserRouter([
   {
     path: '/dashboard',
     element: <Dashboard></Dashboard>,
+    children: [
+      {
+        path: 'add-items',
+        element: (
+          <PrivateRoute>
+            <AddItems></AddItems>
+          </PrivateRoute>
+        ),
+      },
+    ],
   },
 ]);
 

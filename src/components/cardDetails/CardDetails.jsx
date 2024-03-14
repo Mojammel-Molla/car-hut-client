@@ -42,6 +42,7 @@ const CardDetails = () => {
       .then(res => res.json())
       .then(data => {
         console.log(data);
+        alert('Car has been selected');
       });
   };
 
@@ -99,7 +100,10 @@ const CardDetails = () => {
           </div>
           <p className=" font-normal">{description}</p>
           <div className="card-actions justify-end">
-            <button onClick={handleCartData} className="btn btn-primary">
+            <button
+              onClick={handleCartData}
+              className="btn bg-[#d01818] text-white hover:bg-[#253241]"
+            >
               Add to cart
             </button>
           </div>
@@ -131,7 +135,9 @@ const CardDetails = () => {
             ></textarea>
           </div>
           <div className="form-control  mt-6">
-            <button className="btn text-white btn-primary ">Post review</button>
+            <button className="btn bg-[#d01818] text-white hover:bg-[#253241] ">
+              Post review
+            </button>
           </div>
         </form>
       </div>

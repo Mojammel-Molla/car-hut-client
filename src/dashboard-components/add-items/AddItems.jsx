@@ -1,6 +1,8 @@
 import Swal from 'sweetalert2';
-const AddProduct = () => {
-  const handleAddProduct = e => {
+import SectionBanner from '../../shared/section-banner/SectionBanner';
+
+const AddItems = () => {
+  const handleAddItems = e => {
     e.preventDefault();
     const form = e.target;
     const brand = form.brand.value;
@@ -48,8 +50,12 @@ const AddProduct = () => {
   };
   return (
     <div>
-      <h1 className="text-center text-4xl font-bold my-5">Add Products</h1>
-      <form onSubmit={handleAddProduct} className="card-body mx-auto w-2/4">
+      <SectionBanner title="Dashboard" subTitle="Add Items"></SectionBanner>
+      <h1 className="text-center text-2xl underline font-semibold mt-5">
+        Insert here car's detail
+      </h1>
+
+      <form onSubmit={handleAddItems} className="card-body mx-auto w-2/4">
         <div className="flex gap-5 ">
           <div className="form-control w-2/4">
             <label className="label">
@@ -142,11 +148,13 @@ const AddProduct = () => {
         </div>
 
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Add Product</button>
+          <button className="btn bg-[#d01818] text-white hover:bg-[#253241]">
+            Add Items
+          </button>
         </div>
       </form>
     </div>
   );
 };
 
-export default AddProduct;
+export default AddItems;

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import SingleCart from '../cartItem/SingleCart';
+import SectionBanner from '../../shared/section-banner/SectionBanner';
 
 const MyCart = () => {
   const [cartItem, setCartItem] = useState([]);
@@ -16,6 +17,7 @@ const MyCart = () => {
   }, []);
   return (
     <div>
+      <SectionBanner title="Cars" subTitle="Wish-listed"></SectionBanner>
       <div className=" lg:mt-20 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
         {cartItem.map(item => (
           <SingleCart key={item._id} item={item}></SingleCart>

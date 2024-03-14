@@ -67,7 +67,7 @@ const Login = () => {
             <p>
               Do not have account?
               <Link
-                className=" text-blue-600 ml-2 label-text-alt link link-hover"
+                className=" text-blue-600 ml-2 label-text-alt link link-hover font-bold"
                 to="/register"
               >
                 Register
@@ -76,7 +76,9 @@ const Login = () => {
           </label>
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Login</button>
+          <button className="btn bg-[#d01818] text-white hover:bg-[#253241]">
+            Login
+          </button>
         </div>
         <div className="flex justify-center mt-5">
           <button onClick={handleGoogle} className="btn">

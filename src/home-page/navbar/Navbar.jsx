@@ -20,13 +20,13 @@ const Navbar = () => {
         <li>Wishlist</li>
       </NavLink>
 
-      <NavLink to="/addProduct">
-        <li>Add Product</li>
+      <NavLink to="">
+        <li>About Us</li>
       </NavLink>
 
-      <NavLink to="/reviews">
+      {/* <NavLink to="/reviews">
         <li>Reviews</li>
-      </NavLink>
+      </NavLink> */}
 
       <NavLink
         className={({ isActive }) =>
@@ -94,7 +94,7 @@ const Navbar = () => {
           </div>
           <div className="w-26">
             <img className="h-10 w-13  mx-auto " src={Logo} alt="" />
-            <a className="font-extrabold md:text-4xl">Car Hut</a>
+            <a className="font-extrabold md:text-4xl text-[#d01818]">Car Hut</a>
           </div>
         </div>
         <div className="navbar-center hidden lg:flex font-semibold">

@@ -22,7 +22,9 @@ const Footer = () => {
         <a className="link link-hover font-medium">Safety policy</a>
       </nav>
       <form>
-        <header className="font-bold text-3xl text-orange-900 ">Car Hut</header>
+        <header className="font-extrabold text-3xl text-[#d01818] ">
+          Car Hut
+        </header>
         <fieldset className="form-control w-80">
           <label className="label">
             <span className="label-text">Enter your email address</span>
@@ -33,7 +35,7 @@ const Footer = () => {
               placeholder="username@site.com"
               className="input input-bordered w-full pr-16"
             />
-            <button className="btn bg-orange-700 text-white absolute top-0 right-0 rounded-l-none">
+            <button className="btn bg-[#d01818]  hover:bg-[#253241] text-white absolute top-0 right-0 rounded-l-none">
               For query
             </button>
           </div>

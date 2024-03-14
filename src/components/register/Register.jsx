@@ -90,7 +90,7 @@ const Register = () => {
             <p href="#" className=" ">
               Already have an account?
               <Link
-                className="text-blue-600 ml-2 label-text-alt link link-hover"
+                className="text-blue-600 ml-2 label-text-alt link link-hover font-bold"
                 to="/login"
               >
                 Log in
@@ -99,7 +99,9 @@ const Register = () => {
           </label>
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Register</button>
+          <button className="btn bg-[#d01818] text-white hover:bg-[#253241]">
+            Register
+          </button>
         </div>
       </form>
       <Toaster position="top-center" reverseOrder={false} />

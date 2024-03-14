@@ -6,8 +6,8 @@ const SingleProduct = ({ product }) => {
 
   const firstExample = {
     size: 30,
-    value: 5,
-    edit: true,
+    value: rating,
+    edit: false,
     isHalf: true,
   };
   return (
@@ -31,13 +31,15 @@ const SingleProduct = ({ product }) => {
           </p>
         </div>
 
-        <div className="card-actions flex justify-between">
+        <div className="card-actions flex justify-center">
           <Link to={`/product/${_id}`}>
-            <button className="badge py-3 badge-outline">View Detail</button>
+            <button className="btn py-3 bg-[#d01818] text-white hover:bg-[#253241]">
+              View Detail
+            </button>
           </Link>
-          <Link to={`/updateProduct/${_id}`}>
+          {/* <Link to={`/updateProduct/${_id}`}>
             <button className="badge py-3 badge-outline">Update Product</button>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </div>
