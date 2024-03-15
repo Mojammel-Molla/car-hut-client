@@ -16,7 +16,7 @@ const ContactDetails = () => {
           </p>
         </div>
         <div className="flex gap-2 my-3">
-          <MdLocationOn className="text-3xl"></MdLocationOn>
+          <MdLocationOn className="text-4xl"></MdLocationOn>
           <div>
             <h2 className="font-semibold">Address</h2>
             <p className="font-light">
@@ -26,14 +26,14 @@ const ContactDetails = () => {
           </div>
         </div>
         <div className="flex gap-3 my-3">
-          <GrMailOption className="text-2xl"></GrMailOption>
+          <GrMailOption className="text-3xl"></GrMailOption>
           <div>
             <h2 className="font-semibold">Email</h2>
             <p className="font-light">info@carhut.com</p>
           </div>
         </div>
         <div className="flex gap-3 my-3">
-          <GrPhone className="  text-2xl"></GrPhone>
+          <GrPhone className="  text-3xl"></GrPhone>
           <div>
             <h2 className="font-semibold">Phone</h2>
             <p className="font-light">+1300 138 892 221</p>

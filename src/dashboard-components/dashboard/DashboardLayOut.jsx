@@ -14,7 +14,7 @@ const Dashboard = () => {
                 className={({ isActive }) =>
                   isActive ? 'text-black underline' : ''
                 }
-                to="/dashboard/user-profile"
+                to="/dashboard/my-profile"
               >
                 My Profile
               </NavLink>
@@ -36,9 +36,9 @@ const Dashboard = () => {
                 className={({ isActive }) =>
                   isActive ? 'text-black underline' : ''
                 }
-                to="/dashboard/"
+                to="/dashboard/update-items"
               >
-                Make Payment
+                Update items
               </NavLink>
             </li>
           </ul>

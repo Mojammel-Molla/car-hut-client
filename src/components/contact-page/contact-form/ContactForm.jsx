@@ -23,17 +23,17 @@ const ContactForm = () => {
       );
   };
   return (
-    <div>
-      <div className=" text-center ">
+    <div className="my-5">
+      <div className=" text-center">
         <h1 className=" text-2xl md:text-4xl font-bold mt-5">Contact Us</h1>
-        <p className="lg:text-xl font-medium mt-2">
+        <p className="lg:text-xl font-medium my-2">
           Want appointment? Fill in the form or send us.
         </p>
       </div>
       <form
         ref={form}
         onSubmit={sendEmail}
-        className="card-body lg:w-1/2 mx-auto"
+        className="card-body lg:w-1/2 border-2 rounded-lg mx-auto"
       >
         <div className="form-control">
           <label className="label">

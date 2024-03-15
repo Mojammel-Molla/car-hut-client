@@ -51,8 +51,8 @@ const AddItems = () => {
   return (
     <div>
       <SectionBanner title="Dashboard" subTitle="Add Items"></SectionBanner>
-      <h1 className="text-center text-2xl underline font-semibold mt-5">
-        Insert here car's detail
+      <h1 className="text-center text-2xl uppercase underline font-semibold mt-5">
+        Insert here car details
       </h1>
 
       <form onSubmit={handleAddItems} className="card-body mx-auto w-2/4">
@@ -149,7 +149,7 @@ const AddItems = () => {
 
         <div className="form-control mt-6">
           <button className="btn bg-[#d01818] text-white hover:bg-[#253241]">
-            Add Items
+            Add New Item
           </button>
         </div>
       </form>

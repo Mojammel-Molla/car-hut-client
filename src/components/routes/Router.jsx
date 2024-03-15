@@ -6,14 +6,17 @@ import Register from '../register/Register';
 import MyCart from '../myCart/MyCart';
 import PrivateRoute from '../../privateRoute/PrivateRoute';
 import UpdateProduct from '../updateProduct/UpdateProduct';
-import AllProducts from '../allProducts/AllProducts';
 import ErrorPage from '../errorPage/ErrorPage';
 import CardDetails from '../cardDetails/CardDetails';
 import ContactPage from '../contact-page/ContactPage';
 import Reviews from '../../home-page/reviews.jsx/reviews';
-import Blogs from '../blogs/Blogs';
-import Dashboard from '../../dashboard-components/dashboard/Dashboard';
 import AddItems from '../../dashboard-components/add-items/AddItems';
+import Dashboard from '../../dashboard-components/dashboard/DashboardLayOut';
+import AllItems from '../all-items/AllItems';
+import UpdateItems from '../../dashboard-components/update-items/UpdateItems';
+import MyProfile from '../../dashboard-components/my-profile/MyProfile';
+import Blogs from './../blogs-page/Blogs';
+import About from '../about/About';
 
 const Router = createBrowserRouter([
   {
@@ -32,7 +35,7 @@ const Router = createBrowserRouter([
       },
       {
         path: '/brand/:brand',
-        element: <AllProducts></AllProducts>,
+        element: <AllItems></AllItems>,
       },
       {
         path: '/contact-us',
@@ -41,6 +44,10 @@ const Router = createBrowserRouter([
       {
         path: '/reviews',
         element: <Reviews></Reviews>,
+      },
+      {
+        path: '/about',
+        element: <About></About>,
       },
       {
         path: '/product/:id',
@@ -56,19 +63,6 @@ const Router = createBrowserRouter([
         },
       },
 
-      {
-        path: '/updateProduct/:id',
-        element: (
-          <PrivateRoute>
-            <UpdateProduct></UpdateProduct>
-          </PrivateRoute>
-        ),
-        loader: ({ params }) => {
-          return fetch(
-            `https://car-hut-server-gqfbpbiz9-mojammel-mollas-projects.vercel.app/update/${params.id}`
-          );
-        },
-      },
       {
         path: '/cart',
         element: (
@@ -95,12 +89,37 @@ const Router = createBrowserRouter([
     element: <Dashboard></Dashboard>,
     children: [
       {
+        path: 'my-profile',
+        element: <MyProfile></MyProfile>,
+      },
+      {
         path: 'add-items',
         element: (
           <PrivateRoute>
             <AddItems></AddItems>
           </PrivateRoute>
         ),
+      },
+      {
+        path: 'update-items',
+        element: (
+          <PrivateRoute>
+            <UpdateItems></UpdateItems>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: 'update-items/:id',
+        element: (
+          <PrivateRoute>
+            <UpdateProduct></UpdateProduct>
+          </PrivateRoute>
+        ),
+        loader: ({ params }) => {
+          return fetch(
+            `https://car-hut-server-gqfbpbiz9-mojammel-mollas-projects.vercel.app/update/${params.id}`
+          );
+        },
       },
     ],
   },

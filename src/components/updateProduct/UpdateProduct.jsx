@@ -1,5 +1,6 @@
 import { useLoaderData } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import SectionBanner from '../../shared/section-banner/SectionBanner';
 const UpdateProduct = () => {
   const updatedData = useLoaderData();
   const { _id, brand, model, photo, price, category, rating, description } =
@@ -53,7 +54,10 @@ const UpdateProduct = () => {
 
   return (
     <div>
-      <h1 className="text-center text-4xl font-bold my-5">Update Products</h1>
+      <SectionBanner title="Dashboard" subTitle="Update-Items"></SectionBanner>
+      <h1 className="text-center text-2xl md:text-4xl font-bold my-5">
+        Update Items
+      </h1>
       <form onSubmit={handleUpdateProduct} className="card-body mx-auto w-2/4">
         <div className="flex gap-5 ">
           <div className="form-control w-2/4">
@@ -154,7 +158,9 @@ const UpdateProduct = () => {
         </div>
 
         <div className="form-control mt-6">
-          <button className="btn btn-primary ">Update Product</button>
+          <button className="btn py-3 bg-[#d01818] text-white hover:bg-[#253241] ">
+            Update Item
+          </button>
         </div>
       </form>
     </div>

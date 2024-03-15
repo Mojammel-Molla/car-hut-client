@@ -1,8 +1,7 @@
-import { Link } from 'react-router-dom';
 import ReactStars from 'react-rating-stars-component';
-
-const SingleProduct = ({ product }) => {
-  const { _id, brand, model, photo, price, category, rating } = product || {};
+import { Link } from 'react-router-dom';
+const UpdateCard = ({ item }) => {
+  const { _id, brand, model, photo, price, category, rating } = item || {};
 
   const firstExample = {
     size: 30,
@@ -15,7 +14,7 @@ const SingleProduct = ({ product }) => {
       <figure>
         <img className="h-60 w-96" src={photo} />
       </figure>
-      <div className="card-body">
+      <div className="card-body h-55">
         <h2 className="card-title text-3xl font-bold">{brand}</h2>
         <div className="flex justify-between">
           <p>
@@ -32,18 +31,15 @@ const SingleProduct = ({ product }) => {
         </div>
 
         <div className="card-actions flex justify-center">
-          <Link to={`/product/${_id}`}>
+          <Link to={`/dashboard/update-items/${_id}`}>
             <button className="btn py-3 bg-[#d01818] text-white hover:bg-[#253241]">
-              View Detail
+              Update Product
             </button>
           </Link>
-          {/* <Link to={`/updateProduct/${_id}`}>
-            <button className="badge py-3 badge-outline">Update Product</button>
-          </Link> */}
         </div>
       </div>
     </div>
   );
 };
 
-export default SingleProduct;
+export default UpdateCard;

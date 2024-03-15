@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom';
 const ContactUs = () => {
   return (
     <div>
-      <SectionTitle title="Get Into Us"></SectionTitle>
-
+      {/* <SectionTitle title="Get Into Us"></SectionTitle> */}
       <div className="hero min-h-[80vh] bg-base-200">
         <div className="hero-content flex-col lg:flex-row gap-5">
           <img

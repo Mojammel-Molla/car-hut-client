@@ -40,7 +40,7 @@ const SingleCart = ({ item }) => {
   };
   return (
     <div>
-      <div className="card w-96 bg-base-100 shadow-xl bottom-2">
+      <div className="card w-96 mx-auto bg-base-100 shadow-xl bottom-2">
         <figure>
           <img className="h-60 w-96" src={photo} />
         </figure>

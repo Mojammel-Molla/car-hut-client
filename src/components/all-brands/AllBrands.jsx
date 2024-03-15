@@ -1,7 +1,16 @@
+import { useEffect, useState } from 'react';
 import Brand from '../../home-page/brand/Brand';
+import useAxios from '../../hooks/useAxios';
 import SectionTitle from '../../shared/section-title/SectionTitle';
 
-const AllBrands = ({ brands }) => {
+const AllBrands = () => {
+  const axios = useAxios();
+  const [brands, setBrands] = useState([]);
+  useEffect(() => {
+    axios.get('/brand-name').then(res => {
+      setBrands(res.data);
+    });
+  }, [axios]);
   return (
     <>
       <SectionTitle title="Worlds Top Brands"></SectionTitle>

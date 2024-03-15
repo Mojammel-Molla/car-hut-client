@@ -17,8 +17,8 @@ const MyCart = () => {
   }, []);
   return (
     <div>
-      <SectionBanner title="Cars" subTitle="Wish-listed"></SectionBanner>
-      <div className=" lg:mt-20 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+      <SectionBanner title="Home" subTitle="Wish-list"></SectionBanner>
+      <div className=" lg:mt-20 grid gap-5 md:grid-cols-2 lg:grid-cols-4 mx-auto max-w-[1620px]">
         {cartItem.map(item => (
           <SingleCart key={item._id} item={item}></SingleCart>
         ))}

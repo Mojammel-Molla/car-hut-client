@@ -10,17 +10,27 @@ const Navbar = () => {
     <>
       <NavLink
         className={({ isActive }) =>
-          isActive ? 'font-bold underline text-orange-700' : ' '
+          isActive ? 'font-bold underline text-red-600' : ' '
         }
         to="/"
       >
         <li>Home</li>
       </NavLink>
-      <NavLink to="/cart">
+      <NavLink
+        className={({ isActive }) =>
+          isActive ? 'font-bold underline text-red-600' : ' '
+        }
+        to="/cart"
+      >
         <li>Wishlist</li>
       </NavLink>
 
-      <NavLink to="">
+      <NavLink
+        className={({ isActive }) =>
+          isActive ? 'font-bold underline text-red-600' : ' '
+        }
+        to="/about"
+      >
         <li>About Us</li>
       </NavLink>
 
@@ -30,7 +40,7 @@ const Navbar = () => {
 
       <NavLink
         className={({ isActive }) =>
-          isActive ? 'font-bold underline text-orange-700' : ' '
+          isActive ? 'font-bold underline text-red-600' : ' '
         }
         to="/blog"
       >
@@ -40,15 +50,15 @@ const Navbar = () => {
       <NavLink
         to="/contact-us"
         className={({ isActive }) =>
-          isActive ? 'font-bold underline text-orange-700' : ' '
+          isActive ? 'font-bold underline text-red-600' : ' '
         }
       >
         <li>Contact Us</li>
       </NavLink>
       <NavLink
-        to="/dashboard"
+        to="/dashboard/my-profile"
         className={({ isActive }) =>
-          isActive ? 'font-bold underline text-orange-700' : ' '
+          isActive ? 'font-bold underline text-red-600' : ' '
         }
       >
         <li>Dashboard</li>
