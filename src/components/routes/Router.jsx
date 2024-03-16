@@ -16,7 +16,7 @@ import AllItems from '../all-items/AllItems';
 import UpdateItems from '../../dashboard-components/update-items/UpdateItems';
 import MyProfile from '../../dashboard-components/my-profile/MyProfile';
 import Blogs from './../blogs-page/Blogs';
-import About from '../about/About';
+import About from '../about-page/About';
 
 const Router = createBrowserRouter([
   {
