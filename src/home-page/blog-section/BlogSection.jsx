@@ -18,11 +18,14 @@ const BlogSection = () => {
       .then(data => setBlogs(data));
   }, []);
   return (
-    <div className="h-[55vh] lg:mt-20">
+    <div className="lg:h-[55vh] lg:mt-20">
       <SectionTitle title="Our Blogs"></SectionTitle>
       <div className="grid  md:grid-cols-2 md:gap-5 my-5 lg:my-10  md:mx-10">
         {blogs.slice(0, 2).map(blog => (
-          <div key={blog._id} className="card card-side bg-base-100 shadow-xl">
+          <div
+            key={blog._id}
+            className="card lg:card-side bg-base-100 shadow-xl"
+          >
             <figure>
               <img
                 className="rounded-lg"

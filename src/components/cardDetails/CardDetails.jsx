@@ -71,10 +71,10 @@ const CardDetails = () => {
       });
   };
   return (
-    <div className="flex justify-between gap-5 w-full">
-      <div className="card w-1/3 mx-auto mt-20 bg-base-100 shadow-xl bottom-2">
+    <div className="lg:flex justify-between gap-5 w-full p-5">
+      <div className="card lg:w-1/3 mx-auto mt-20 bg-base-100 shadow-xl bottom-2">
         <figure className="w-full">
-          <img className="h-60 w-96" src={photo} />
+          <img className="md:h-60 md:w-96" src={photo} />
         </figure>
         <div className="card-body">
           <div className="flex justify-between">
@@ -104,12 +104,12 @@ const CardDetails = () => {
               onClick={handleCartData}
               className="btn bg-[#d01818] text-white hover:bg-[#253241]"
             >
-              Add to cart
+              Add to wishlist
             </button>
           </div>
         </div>
       </div>
-      <div className="w-1/2">
+      <div className="lg:w-1/2">
         <SectionTitle title="Tell Your Experience"></SectionTitle>
         <form onSubmit={handleAddReview} className="w-2/4 mx-auto ">
           <div className="form-control ">

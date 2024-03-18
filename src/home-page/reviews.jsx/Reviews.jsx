@@ -33,7 +33,7 @@ const Reviews = () => {
           {reviews.length > 0 &&
             reviews?.map(review => (
               <SwiperSlide key={review?._id}>
-                <div className="card w-1/2 mx-auto h-60 my-10 bg-base-100 shadow-xl">
+                <div className="card md:w-1/2 mx-auto h-60 my-10 bg-base-100 shadow-xl">
                   <div className="card-body">
                     <div className="flex gap-3">
                       <img

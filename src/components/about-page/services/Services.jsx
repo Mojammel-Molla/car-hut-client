@@ -4,15 +4,19 @@ import { BiSolidCheckShield } from 'react-icons/bi';
 const Services = () => {
   return (
     <div className="grid md:grid-cols-3 lg:gap-20 my-4">
-      <div className="w-72 text-center space-y-2">
+      <div className="md:72 lg:w-80 text-center space-y-2 shadow-xl p-10 relative">
         <FaHandHoldingDollar className="text-3xl w-full mx-auto" />
         <h3 className="text-2xl font-semibold">Easy Financing</h3>
         <p>
           Drive away stress-free with our seamless financing solutions, tailored
           to fit your budget and make owning your dream car a reality.
         </p>
+        <p
+          style={{}}
+          className="bg-red-600 p-2 w-2 absolute left-2 bottom-2"
+        ></p>
       </div>
-      <div className="w-72 text-center p-5 space-y-2 bg-slate-600 text-white">
+      <div className="md:72 lg:w-80  shadow-xl text-center p-10 space-y-2 bg-slate-600 text-white">
         <FaCarRear className="text-3xl w-full mx-auto" />
         <h3 className="text-2xl font-semibold">All Brands Cars</h3>
         <p>
@@ -21,7 +25,7 @@ const Services = () => {
           preferences.
         </p>
       </div>
-      <div className="w-72 text-center space-y-2">
+      <div className="md:72 lg:w-80  text-center  shadow-xl space-y-2 p-10">
         <BiSolidCheckShield className="text-3xl w-full mx-auto" />
         <h3 className="text-2xl font-semibold">Quality Services</h3>
         <p>

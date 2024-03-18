@@ -22,7 +22,7 @@ const AllItems = () => {
   return (
     <div>
       <SectionBanner title="Cars" subTitle="Details"></SectionBanner>
-      <div className="grid gap-3 lg:ml-12 md:grid-cols-2 lg:grid-cols-4 mt-10 mx-auto">
+      <div className="grid gap-5 lg:ml-12 md:grid-cols-2 lg:grid-cols-4 mt-10 mx-auto ">
         {filterProduct?.map(item => (
           <SingleItem key={item._id} item={item}></SingleItem>
         ))}

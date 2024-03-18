@@ -50,7 +50,7 @@ const OurServices = () => {
             </p>
           </div>
         </div>
-        <div className="mb-10 ">
+        <div className="mb-10 mx-auto">
           <img src={MiddleBanner} alt="" />
         </div>
         <div className="max-w-md text-center mx-auto py-6  lg:text-start gap-3 space-y-5">

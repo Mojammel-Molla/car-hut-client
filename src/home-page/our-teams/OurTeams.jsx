@@ -9,8 +9,8 @@ const OurTeams = () => {
           Our Sales <span className="text-[#d01818]">Team</span>
         </h2>
       </div>
-      <div className="max-w-7xl mx-auto grid grid-cols-4 gap-4">
-        <div className="w-60 hover:bg-[#d01818]">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-4 ">
+        <div className="w-60 cursor-pointer hover:bg-[#d01818] mx-auto">
           <img
             className="pr-3"
             src="https://revus.tm-colors.info/dealer/wp-content/uploads/2020/04/revus-team-image-1-min.jpg"
@@ -21,7 +21,7 @@ const OurTeams = () => {
             <p className="font-semibold">Director</p>
           </div>
         </div>
-        <div className="w-60 hover:bg-[#d01818]">
+        <div className="w-60 cursor-pointer hover:bg-[#d01818] mx-auto">
           <img
             className="pr-3"
             src="https://revus.tm-colors.info/dealer/wp-content/uploads/2020/04/revus-team-image-2-min.jpg"
@@ -32,7 +32,7 @@ const OurTeams = () => {
             <p className="font-semibold">Sales Manager</p>
           </div>
         </div>
-        <div className="w-60 hover:bg-[#d01818]">
+        <div className="w-60 cursor-pointer hover:bg-[#d01818] mx-auto">
           <img
             className="pr-3"
             src="https://revus.tm-colors.info/dealer/wp-content/uploads/2020/04/revus-team-image-3-min.jpg"
@@ -43,7 +43,7 @@ const OurTeams = () => {
             <p className="font-semibold">Co-Founder</p>
           </div>
         </div>
-        <div className="w-60 hover:bg-[#d01818]">
+        <div className="w-60 hover:bg-[#d01818] mx-auto">
           <img
             className="pr-3"
             src="https://revus.tm-colors.info/dealer/wp-content/uploads/2020/04/revus-team-image-4-min.jpg"

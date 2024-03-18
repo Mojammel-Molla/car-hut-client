@@ -14,7 +14,7 @@ const AllBrands = () => {
   return (
     <>
       <SectionTitle title="Worlds Top Brands"></SectionTitle>
-      <div className=" max-w-[1480px] mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div className=" max-w-[1480px] mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-5 ">
         {brands?.map(brand => (
           <Brand key={brand.id} brand={brand}></Brand>
         ))}

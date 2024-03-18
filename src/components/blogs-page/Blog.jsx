@@ -10,7 +10,7 @@ const Blog = ({ blog, isShow, setIsShow }) => {
   return (
     <div className="hero min-h-[70vh] bg-base-100 border-b-2">
       <div className="hero-content flex-col lg:flex-row">
-        <img src={blog_image} className="max-w-lg rounded-lg shadow-2xl" />
+        <img src={blog_image} className="md:max-w-lg rounded-lg shadow-2xl" />
         <div className="pt-10">
           <h1 className="text-3xl font-bold">{blog_title}</h1>
           {isShow ? (

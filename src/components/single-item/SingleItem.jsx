@@ -37,9 +37,6 @@ const SingleItem = ({ item }) => {
               View Detail
             </button>
           </Link>
-          {/* <Link to={`/updateProduct/${_id}`}>
-            <button className="badge py-3 badge-outline">Update Product</button>
-          </Link> */}
         </div>
       </div>
     </div>

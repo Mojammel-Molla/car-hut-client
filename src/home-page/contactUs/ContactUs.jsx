@@ -10,7 +10,7 @@ const ContactUs = () => {
           <img
             src={ContactImage}
             alt="Image"
-            className="max-w-xl rounded-lg shadow-2xl"
+            className="md:max-w-xl rounded-lg shadow-2xl"
           />
           <div>
             <h1 className=" text-2xl md:text-5xl font-semibold">
