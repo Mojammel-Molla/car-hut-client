@@ -74,15 +74,15 @@ const Router = createBrowserRouter([
         //   return fetch(`https://car-hut-server-gqfbpbiz9-mojammel-mollas-projects.vercel.app/cart/${params.id}`);
         // },
       },
-      {
-        path: '/login',
-        element: <Login></Login>,
-      },
-      {
-        path: '/register',
-        element: <Register></Register>,
-      },
     ],
+  },
+  {
+    path: '/login',
+    element: <Login></Login>,
+  },
+  {
+    path: '/register',
+    element: <Register></Register>,
   },
   {
     path: '/dashboard',
