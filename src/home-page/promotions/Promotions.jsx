@@ -3,7 +3,7 @@ import PromotionBanner from '../../assets/promotion-image.webp';
 const Promotions = () => {
   return (
     <div
-      className="hero min-h-[80vh] mb-3"
+      className="hero min-h-[80vh] "
       style={{
         backgroundImage: `url(${PromotionBanner})`,
       }}

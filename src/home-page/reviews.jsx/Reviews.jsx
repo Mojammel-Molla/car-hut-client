@@ -17,8 +17,18 @@ const Reviews = () => {
   }, []);
 
   return (
-    <div className="my-16">
-      <SectionTitle title="Testimonials"></SectionTitle>
+    <div
+      style={{
+        backgroundImage: `url(https://revus.tm-colors.info/dealer/wp-content/uploads/2020/04/testimonial-slider-image-background-min.jpg)`,
+      }}
+      className="mt-5 md:h-[70vh]"
+    >
+      <h4 className="text-center font-bold text-xs text-white pt-6">
+        HELPS YOU TO FIND PERFECT CAR
+      </h4>
+      <h1 className="sm:text-2xl md:text-4xl text-center font-bold mb-10 text-white">
+        What Our <span className="text-red-600">Clients</span> Say
+      </h1>
 
       <div className="divider"></div>
       <div className=" max-w-[1440px] h-96 mx-auto">

@@ -19,7 +19,10 @@ const BlogSection = () => {
   }, []);
   return (
     <div className="lg:h-[55vh] lg:mt-20">
-      <SectionTitle title="Our Blogs"></SectionTitle>
+      <SectionTitle></SectionTitle>
+      <h1 className="sm:text-2xl md:text-4xl text-center font-bold mb-10 ">
+        Our <span className="text-red-600">Blogs</span>
+      </h1>
       <div className="grid  md:grid-cols-2 md:gap-5 my-5 lg:my-10  md:mx-10">
         {blogs.slice(0, 2).map(blog => (
           <div

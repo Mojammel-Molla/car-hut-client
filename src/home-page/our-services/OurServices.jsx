@@ -1,6 +1,7 @@
 import ServiceBanner from '../../assets/Service-banner.png';
 import MiddleBanner from '../../assets/middle-banner.png';
-import SectionTitle from '../../shared/section-title/SectionTitle';
+import SectionTitle from '../../shared/section-title/Sectiontitle';
+
 const OurServices = () => {
   return (
     <div
@@ -9,7 +10,10 @@ const OurServices = () => {
         backgroundImage: `url(${ServiceBanner})`,
       }}
     >
-      <SectionTitle title="Our Services"></SectionTitle>
+      <SectionTitle></SectionTitle>
+      <h1 className="sm:text-2xl md:text-4xl text-center font-bold mb-10 ">
+        Services We <span className="text-red-600">Offers</span>
+      </h1>
       <div className="  grid lg:grid-cols-3 mx-auto max-w-[1680px]">
         <div className="max-w-md text-center mx-auto py-6  lg:text-end gap-3 space-y-5">
           <div className="">

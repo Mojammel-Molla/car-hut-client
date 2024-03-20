@@ -1,6 +1,6 @@
 const OurTeams = () => {
   return (
-    <div>
+    <div className="md:h-[60vh]">
       <div className="text-center py-10">
         <h6 className="text-xs pb-3 font-bold">
           HELPS YOU TO FIND PERFECT CAR

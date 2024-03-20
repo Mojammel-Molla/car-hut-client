@@ -6,7 +6,7 @@ const SingleItem = ({ item }) => {
 
   const firstExample = {
     size: 30,
-    value: rating,
+    value: parseFloat(rating),
     edit: false,
     isHalf: true,
   };
@@ -25,10 +25,7 @@ const SingleItem = ({ item }) => {
         </div>
         <div className="flex justify-between">
           <p>Price:${price}</p>
-
-          <p className="ml-20">
-            <ReactStars {...firstExample} />,
-          </p>
+          <ReactStars {...firstExample} />,
         </div>
 
         <div className="card-actions flex justify-center">
