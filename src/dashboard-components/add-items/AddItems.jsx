@@ -1,7 +1,9 @@
 import Swal from 'sweetalert2';
 import SectionBanner from '../../shared/section-banner/SectionBanner';
+import useAxios from '../../hooks/useAxios';
 
 const AddItems = () => {
+  const axios = useAxios();
   const handleAddItems = e => {
     e.preventDefault();
     const form = e.target;
@@ -24,29 +26,42 @@ const AddItems = () => {
     };
     console.log(newProduct);
 
-    fetch(
-      'https://car-hut-server-gqfbpbiz9-mojammel-mollas-projects.vercel.app/products',
-      {
-        method: 'POST',
-        headers: {
-          'content-type': 'application/json',
-        },
-        body: JSON.stringify(newProduct),
+    axios.post('/products', newProduct).then(res => {
+      console.log(res.data);
+      form.reset();
+      if (res.data.insertedId > 0) {
+        Swal.fire({
+          position: 'top-center',
+          icon: 'success',
+          title: 'Your product has been added',
+          showConfirmButton: false,
+        });
       }
-    )
-      .then(res => res.json())
-      .then(data => {
-        console.log(data);
-        form.reset();
-        if (data.insertedId > 0) {
-          Swal.fire({
-            position: 'top-center',
-            icon: 'success',
-            title: 'Your product has been added',
-            showConfirmButton: false,
-          });
-        }
-      });
+    });
+
+    // fetch(
+    //   'https://car-hut-server-gqfbpbiz9-mojammel-mollas-projects.vercel.app/products',
+    //   {
+    //     method: 'POST',
+    //     headers: {
+    //       'content-type': 'application/json',
+    //     },
+    //     body: JSON.stringify(newProduct),
+    //   }
+    // )
+    //   .then(res => res.json())
+    //   .then(data => {
+    //     console.log(data);
+    //     form.reset();
+    //     if (data.insertedId > 0) {
+    //       Swal.fire({
+    //         position: 'top-center',
+    //         icon: 'success',
+    //         title: 'Your product has been added',
+    //         showConfirmButton: false,
+    //       });
+    //     }
+    //   });
   };
   return (
     <div>

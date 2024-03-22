@@ -3,9 +3,12 @@ import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
 import toast, { Toaster } from 'react-hot-toast';
 import RegisterImage from '../../assets/20863876_6387974.jpg';
+import useAxios from '../../hooks/useAxios';
+import Swal from 'sweetalert2';
 const Register = () => {
   const { createUser, handleUserProfile } = useContext(AuthContext);
   const navigate = useNavigate();
+  const axios = useAxios();
   const handleRegister = e => {
     e.preventDefault();
     const form = e.target;
@@ -13,7 +16,11 @@ const Register = () => {
     const email = form.email.value;
     const password = form.password.value;
     const photo = form.photo.value;
-    // const user = { name, email, password, photo };
+    const newUser = {
+      name: name,
+      email: email,
+      role: 'user',
+    };
     console.log(name, email, password, photo);
     if (!/^.{6,32}$/.test(password)) {
       toast.error('password is too short');
@@ -34,7 +41,11 @@ const Register = () => {
         .catch(err => {
           console.log(err);
         });
-      toast.success('User created successfully!');
+
+      axios.post('/users', newUser).then(res => {
+        console.log(res.data);
+        toast.success('User created successfully!');
+      });
     }
   };
   return (
