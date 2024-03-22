@@ -19,7 +19,7 @@ const CalculateLoan = () => {
     const monthly = total / (year * 12);
     setTotalInterest(interest);
     setTotalPayment(total);
-    setMonthlyPayment(monthly);
+    setMonthlyPayment(monthly.toFixed(2));
   };
   return (
     <div className="lg:flex  w-full lg:h-[60vh] items-center">

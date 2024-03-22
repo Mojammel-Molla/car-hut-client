@@ -17,6 +17,7 @@ import UpdateItems from '../../dashboard-components/update-items/UpdateItems';
 import MyProfile from '../../dashboard-components/my-profile/MyProfile';
 import Blogs from './../blogs-page/Blogs';
 import About from '../about-page/About';
+import AllUsers from '../../dashboard-components/all-users/AllUsers';
 
 const Router = createBrowserRouter([
   {
@@ -120,6 +121,14 @@ const Router = createBrowserRouter([
             `https://car-hut-server-gqfbpbiz9-mojammel-mollas-projects.vercel.app/update/${params.id}`
           );
         },
+      },
+      {
+        path: 'all-users',
+        element: (
+          <PrivateRoute>
+            <AllUsers></AllUsers>
+          </PrivateRoute>
+        ),
       },
     ],
   },

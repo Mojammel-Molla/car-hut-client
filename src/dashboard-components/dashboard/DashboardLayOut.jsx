@@ -41,6 +41,16 @@ const Dashboard = () => {
                 Update items
               </NavLink>
             </li>
+            <li>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? 'text-black underline' : ''
+                }
+                to="/dashboard/all-users"
+              >
+                All Users
+              </NavLink>
+            </li>
           </ul>
         </div>
         <div className="flex-1">
