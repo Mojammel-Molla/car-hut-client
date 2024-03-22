@@ -8,7 +8,7 @@ const AboutUs = () => {
         <img src={TeamImg} className="lg:max-w-lg rounded-lg shadow-2xl" />
         <div>
           <SectionTitle></SectionTitle>
-          <h1 className="sm:text-2xl md:text-4xl text-center font-bold mb-10 ">
+          <h1 className="text-2xl md:text-4xl text-center font-bold mb-10 ">
             About <span className="text-red-600">Us</span>
           </h1>
           <p className="py-6">

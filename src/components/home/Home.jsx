@@ -9,6 +9,7 @@ import OurServices from '../../home-page/our-services/OurServices';
 import HowWeWorks from '../../home-page/how-we-works/HowWeWorks';
 import Greetings from '../../home-page/greetings/Greetings';
 import OurTeams from '../../home-page/our-teams/OurTeams';
+import CalculateLoan from '../../home-page/calculate-loan/CalculateLoan';
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
       <HowWeWorks></HowWeWorks>
       <Promotions></Promotions>
       <OurServices></OurServices>
+      <CalculateLoan></CalculateLoan>
       <BlogSection></BlogSection>
       <AboutUs></AboutUs>
       <OurTeams></OurTeams>

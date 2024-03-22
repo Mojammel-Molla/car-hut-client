@@ -18,6 +18,7 @@ const AllItems = () => {
       setLoadedProducts(res.data);
     });
   }, [axios, brand]);
+  console.log(filterProduct);
 
   return (
     <div>
