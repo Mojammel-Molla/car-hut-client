@@ -8,7 +8,9 @@ const ContactPage = () => {
     <div className="w-full ">
       <SectionBanner title="Home" subTitle="Contact Us"></SectionBanner>
       <div className=" text-start p-3">
-        <h1 className="lg:text-4xl font-bold mt-5">Contact Us</h1>
+        <h1 className=" text-2xl md:text-3xl font-bold  mb-2">
+          Helps To Find <span className="text-red-600">Our</span> Location
+        </h1>
 
         <ContactMap></ContactMap>
       </div>

@@ -76,7 +76,7 @@ const Navbar = () => {
   };
   return (
     <>
-      <div className="navbar px-5 w-full bg-base-100  shadow-md ">
+      <div className="navbar px-5 w-full bg-base-200 shadow-md">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -123,9 +123,12 @@ const Navbar = () => {
             <img className="w-12 h-12 rounded-full" src={UserImg} />
           )}
           <Link to="/login">
-            <p onClick={handleLogOut} className="btn">
+            <button
+              onClick={handleLogOut}
+              className="btn text-white bg-red-600 hover:bg-slate-600"
+            >
               {user ? 'Log out' : 'Login'}
-            </p>
+            </button>
           </Link>
         </div>
       </div>

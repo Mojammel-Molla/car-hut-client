@@ -11,10 +11,10 @@ const Services = () => {
           Drive away stress-free with our seamless financing solutions, tailored
           to fit your budget and make owning your dream car a reality.
         </p>
-        <p
+        {/* <p
           style={{}}
           className="bg-red-600 p-2 w-2 absolute left-2 bottom-2"
-        ></p>
+        ></p> */}
       </div>
       <div className="md:72 lg:w-80  shadow-xl text-center p-10 space-y-2 bg-slate-600 text-white">
         <FaCarRear className="text-3xl w-full mx-auto" />

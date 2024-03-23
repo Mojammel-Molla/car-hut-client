@@ -3,7 +3,7 @@ const SectionBanner = ({ title, subTitle }) => {
   return (
     <div
       style={{ backgroundImage: `url(${BannerImage})` }}
-      className="h-[30vh] flex  justify-center items-center my-3"
+      className="h-[30vh] flex  justify-center items-center mb-3"
     >
       <div>
         <h1 className="text-3xl text-white font-bold">

@@ -16,7 +16,7 @@ const OurServices = () => {
       </h1>
       <div className="  grid lg:grid-cols-3 mx-auto max-w-[1680px]">
         <div className="max-w-md text-center mx-auto py-6  lg:text-end gap-3 space-y-5">
-          <div className="">
+          <div className=" ">
             <h1 className="text-2xl font-semibold">Experience support team</h1>
             <p className="px-3">
               Our dedicated team of experts is committed to providing

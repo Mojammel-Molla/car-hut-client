@@ -7,7 +7,7 @@ const Banner = () => {
         style={{
           backgroundImage: `url(${BackgroundImage})`,
         }}
-        className="hero min-h-[90vh]  border-2"
+        className="hero min-h-[90vh]  border-2 "
       >
         <div className="hero-content flex-col lg:flex-row-reverse">
           <img

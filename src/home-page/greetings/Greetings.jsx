@@ -45,7 +45,7 @@ const Greetings = () => {
         </div>
       </div>
       <div className="my-5 max-w-7xl mx-auto">
-        <img className="my-20" src={GreetingsBanner} alt="" />
+        <img className="my-20 mx-auto" src={GreetingsBanner} alt="" />
       </div>
     </div>
   );
